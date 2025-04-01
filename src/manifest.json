@@ -83,8 +83,8 @@
   {
     "router":
     {
-      "mode": "hash",
-      "base": "/uniapp-vue3-template/"
+      "mode": "history",
+      "base": ""
     }
   }
 }

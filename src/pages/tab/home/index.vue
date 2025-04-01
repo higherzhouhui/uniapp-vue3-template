@@ -47,6 +47,7 @@ title.value = import.meta.env.VITE_APP_TITLE;
 const showAgreePrivacy = ref(false);
 
 const userStore = useUserStore();
+
 console.log('userStore.user_name', userStore.user_name);
 
 // 同意隐私协议
