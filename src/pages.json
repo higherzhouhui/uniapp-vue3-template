@@ -9,36 +9,37 @@
   },
   "pages": [
     {
-      "path": "pages/tab/home/index",
+      "path": "pages/menu/home/index",
       "style": {
-        "navigationBarTitleText": "首页"
+        "navigationBarTitleText": ""
       }
     },
     {
-      "path": "pages/tab/list/index",
+      "path": "pages/menu/list/index",
       "style": {
         "navigationBarTitleText": "列表"
       }
     },
     {
-      "path": "pages/tab/user/index",
+      "path": "pages/menu/user/index",
       "style": {
         "navigationStyle": "custom"
       },
       "needLogin": true
+    },
+    {
+      "path": "pages/login",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "navigationStyle": "custom"
+      }
     }
   ],
+  
   "subPackages": [
     {
       "root": "pages/common",
       "pages": [
-        {
-          "path": "login/index",
-          "style": {
-            "navigationBarTitleText": "登录",
-            "navigationStyle": "custom"
-          }
-        },
         {
           "path": "webview/index",
           "style": {
@@ -69,18 +70,18 @@
     "list": [{
       "iconPath": "static/images/tabbar/icon_home.png",
       "selectedIconPath": "static/images/tabbar/icon_home_selected.png",
-      "pagePath": "pages/tab/home/index",
-      "text": "首页"
+      "pagePath": "pages/menu/home/index",
+      "text": ""
     }, {
       "iconPath": "static/images/tabbar/icon_list.png",
       "selectedIconPath": "static/images/tabbar/icon_list_selected.png",
-      "pagePath": "pages/tab/list/index",
-      "text": "列表"
+      "pagePath": "pages/menu/list/index",
+      "text": ""
     }, {
       "iconPath": "static/images/tabbar/icon_me.png",
       "selectedIconPath": "static/images/tabbar/icon_me_selected.png",
-      "pagePath": "pages/tab/user/index",
-      "text": "我的"
+      "pagePath": "pages/menu/user/index",
+      "text": ""
     }]
   },
   "globalStyle": {

@@ -26,24 +26,30 @@
 
 <script setup lang="ts">
 // #ifdef MP-WEIXIN
-import { useShare } from '@/hooks';
+// import { useShare } from '@/hooks';
 // #endif
+import { setTabBar } from '@/main';
 import { useUserStore } from '@/store';
+import { useI18n } from 'vue-i18n';
 
-// #ifdef MP-WEIXIN
-// 分享使用示例
-const { onShareAppMessage, onShareTimeline } = useShare({
-  title: '首页',
-  path: 'pages/tab/home/index',
-  imageUrl: '',
-});
-onShareAppMessage();
-onShareTimeline();
-// #endif
+const { t } = useI18n();
+// // #ifdef MP-WEIXIN
+// // 分享使用示例
+// const { onShareAppMessage, onShareTimeline } = useShare({
+//   title: '首页',
+//   path: 'pages/menu/home/index',
+//   imageUrl: '',
+// });
+// onShareAppMessage();
+// onShareTimeline();
+// // #endif
 
 const title = ref<string>();
 title.value = import.meta.env.VITE_APP_TITLE;
-
+// 国际化动态设置标题；在pages.json中设置的话需要重启才能生效
+uni.setNavigationBarTitle({ title: t('pageTitle.home') });
+// 设置tabbar标题;凡是tabBar页面都需要设置tabbar标题
+setTabBar();
 const showAgreePrivacy = ref(false);
 
 const userStore = useUserStore();

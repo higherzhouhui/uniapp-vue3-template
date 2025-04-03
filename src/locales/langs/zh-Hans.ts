@@ -8,4 +8,9 @@ export default {
     'intro': '欢迎来到uni-app演示',
     'toggle-langs': '切换语言',
   },
+  pageTitle: {
+    home: '首页',
+    list: '列表',
+    user: '我的',
+  },
 };
